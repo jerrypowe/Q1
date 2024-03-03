@@ -73,7 +73,7 @@ public class StraighLine implements Shape{
     @Override
     public void draw(){
         
-        info = "Line from ("+p1.getX()+","+p1.getY()+")"+"to"+"("+p2.getX()+","+p2.getY()+")\n";
+        info = "Line from ("+p1.getX()+","+p1.getY()+")"+" to "+"("+p2.getX()+","+p2.getY()+")\n";
     }
    public float getLength(){
        float length;

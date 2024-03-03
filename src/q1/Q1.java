@@ -15,8 +15,8 @@ import java.util.Scanner;
 public class Q1 {
 
     //Change the name of input and output file based on practical paper
-    String inputFile = "src/q1/input.txt";
-    String outputFile = "src/q1/output.txt";
+    String inputFile = "input.txt";
+    String outputFile = "output.txt";
 
     //--VARIABLES - @STUDENT: DECLARE YOUR VARIABLES HERE:
    private ArrayList<String> S1 = new ArrayList<>();
@@ -111,16 +111,17 @@ public class Q1 {
                         System.out.println("Invalid format for Line: " + line);
                     }
                 } else if (S2[0].equals("Draw")) {
-                    S7.add("---Draw---");
+                    S7.add("---Draw---\n");
+                    for (StraighLine s : S5) {
+                        s.draw();
+                        S7.add(s.getInfo());
+                    }
                     for (Point p : S4) {
                         p.draw();
                         S7.add(p.getInfo());
                         
                     }
-                    for (StraighLine s : S5) {
-                        s.draw();
-                        S7.add(s.getInfo());
-                    }
+                    
                     S7.add("----------\n");
                 } else if (S2[0].equals("Clear")) {
                     S4.clear();
